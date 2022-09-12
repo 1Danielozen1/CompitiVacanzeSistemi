@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -44,
+      "left": 154.67,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -63.72,
+      "left": -34.65,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 80.29, "left": -81.65, "attrs": {} }
+  ],
+  "connections": [
+    [ "led6:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led6:A", "pico:GP0", "green", [ "v0" ] ],
+    [ "pot1:GND", "pico:GND.2", "black", [ "v45.9", "h207.32" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v78.57", "h270.57" ] ],
+    [ "pot1:SIG", "pico:GP28", "green", [ "v58.57", "h278.32" ] ]
+  ]
+}

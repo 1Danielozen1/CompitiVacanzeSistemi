@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": -0.53, "left": 82.58, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -9.72,
+      "left": -84.99,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 113.48,
+      "left": -154.98,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "led3:A", "pico:GP3", "green", [ "v0" ] ],
+    [ "led3:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "btn1:2.r", "pico:GP4", "green", [ "h0" ] ],
+    [ "btn1:1.r", "pico:3V3", "red", [ "v-11.18", "h251.56" ] ]
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -44,
+      "left": 154.67,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -65.38,
+      "left": -209.65,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -64.38,
+      "left": -171.98,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -64.71,
+      "left": -133.65,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -64.38,
+      "left": -100.65,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": -63.38,
+      "left": -67.65,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -63.72,
+      "left": -34.65,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 131.29, "left": -94.98, "attrs": {} }
+  ],
+  "connections": [
+    [ "led6:A", "pico:GP0", "green", [ "v4.08", "h165.32" ] ],
+    [ "led1:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led2:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led3:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led4:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led5:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led6:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "pot1:GND", "pico:GND.2", "black", [ "v20.57", "h220.65" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v54.57", "h283.9" ] ],
+    [ "pot1:SIG", "pico:GP28", "magenta", [ "v33.91", "h291.65" ] ],
+    [ "led5:A", "pico:GP1", "green", [ "v13.07", "h198.32" ] ],
+    [ "led4:A", "pico:GP2", "green", [ "v0" ] ],
+    [ "led3:A", "pico:GP3", "green", [ "v0" ] ],
+    [ "led2:A", "pico:GP4", "green", [ "v0" ] ],
+    [ "led1:A", "pico:GP5", "green", [ "v0" ] ]
+  ]
+}

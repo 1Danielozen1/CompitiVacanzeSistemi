@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [ { "id": "pico", "type": "wokwi-pi-pico", "attrs": { "env": "micropython-20220117-v1.18" } } ],
+  "connections": []
+}

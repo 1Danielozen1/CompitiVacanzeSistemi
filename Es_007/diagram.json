@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -44,
+      "left": 154.67,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -63.72,
+      "left": -34.65,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [ [ "led6:C", "pico:GND.2", "black", [ "v0" ] ], [ "led6:A", "pico:GP5", "green", [ "v0" ] ] ]
+}

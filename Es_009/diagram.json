@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Andrea Giordano",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -39.3,
+      "left": -107.49,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -22.82, "left": 181.55, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 69.37,
+      "left": 125.23,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GND.2", "bz1:1", "black", [ "h0" ] ],
+    [ "bz1:2", "pico:GP5", "red", [ "v0" ] ],
+    [ "sw1:1", "pico:3V3", "green", [ "v0" ] ],
+    [ "sw1:3", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "pico:GP18", "green", [ "v0" ] ]
+  ]
+}
